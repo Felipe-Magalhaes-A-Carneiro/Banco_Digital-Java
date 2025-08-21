@@ -1,9 +1,27 @@
 public abstract class Conta {
     
+    // CONSTANTES
+    
+    protected static final int AGENCIA_PADRAO = 1; // Constante para agência padrão
+    // 'protected' para que subclasses possam acessar, mas não de fora do pacote
+    private static int SEQUENCIAL = 1; // Sequencial para número da conta corrente
+    // 'static' para que o número da conta seja compartilhado entre todas as instâncias
+
     // ATRIBUTOS
-    private int agencia;
-    private int numero;
-    private int saldo;
+    protected int agencia; // 'private' para encapsulamento, 'protected' se subclasses precisarem acessar
+    protected int numero;
+    protected int saldo;
+
+    
+
+    public Conta() {
+        // Construtor específico para ContaCorrente
+        // Inicialização de atributos específicos, se necessário
+        this.agencia = AGENCIA_PADRAO;
+        this.numero =  SEQUENCIAL++;
+    }
+
+
 
     public void sacar(double valor) {
         if (valor <= saldo) {
