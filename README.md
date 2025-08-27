@@ -1,2 +1,2 @@
 # Banco_Digital-Java
-Criando um Banco Digital com Java e Orientação a Objetos
+Criando um Banco Digital básico com Java e Orientação a Objetos
